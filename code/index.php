@@ -49,3 +49,9 @@ foreach($arr as &$value){
 }
 echo sqrt($sum);
 
+echo round(sqrt(379), 0);
+echo round(sqrt(379), 1);
+echo round(sqrt(379), 2);
+$floor = floor(sqrt(587));
+$ceil = ceil(sqrt(587));
+$as_arr = array("floor" => $floor, "ceil" => $ceil);

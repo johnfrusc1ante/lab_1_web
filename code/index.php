@@ -33,3 +33,10 @@ echo $answer;
 $a = 10;
 $b = 3;
 echo $a%$b;
+
+if ($a%$b == 0)
+    echo "делится";
+else
+    echo "делится с остатком";
+
+

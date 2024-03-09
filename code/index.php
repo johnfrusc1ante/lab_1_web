@@ -90,3 +90,12 @@ for ($i=0; $i <= sizeof($arr) && $sum <= 10; $i += 1) {
     $num += 1;
 }
 echo "Необходимо сложить $num первых элементов чтобы получилась сумма больше 10.";
+
+function printStringReturnNumber($str)
+{
+    echo $str;
+    $num = 69;
+    return $num;
+}
+$my_num = printStringReturnNumber("Hasbula");
+echo $my_num;

@@ -218,3 +218,60 @@ echo "Количество элементов массива ['a', 'b', 'c', 'd'
 $arr2 = ['a', 'b', 'c', 'd', 'e'];
 echo "Последний элемент массива ['a', 'b', 'c', 'd', 'e']: ", $arr1[4];
 echo "Предпоследний элемент массива ['a', 'b', 'c', 'd', 'e']: ", $arr1[3];
+
+
+function checkSum($num, $num1)
+{
+    if (($num + $num1) > 10)
+        return "true";
+    else
+        return "false";
+}
+echo "Результат при сложении 1 и 11: ", checkSum(1, 11);
+echo "Результат при сложении 2 и 3: ", checkSum(2, 3);
+
+function checkEqual($num, $num1)
+{
+    if ($num == $num1)
+        return "true";
+    else
+        return "false";
+}
+echo "Результат при сравнении 5 и 5: ", checkEqual(5, 5);
+echo "Результат при сравнении 2 и 3: ", checkEqual(2, 3);
+
+$test = 1;
+if ($test == 0)
+    echo "верно";
+
+$age = rand(1, 150);
+function checkAge($age)
+{
+    if (($age > 10) && ($age < 99)) {
+        $sum = ($age % 10) + (int)($age / 10);
+        echo "Сумма цифр $age: ", $sum;
+        echo "Сумма цифр $age двузначна.";
+    }
+    elseif ($age > 99)
+        echo "Число $age вне диапозона от 10 до 99.";
+    else
+        echo "Сумма цифр $age однозначна.";
+}
+checkAge($age);
+
+$another_arr = [1, 2, 3];
+function checkArrayElements($arr)
+{
+    $sum = 0;
+    if (sizeof($arr) == 3) {
+        for ($i = 0; $i < sizeof($arr); $i++)
+            $sum += $arr[$i];
+
+        echo "Сумма трёх элементов массива: ", $sum;
+    }
+    else
+        echo "В массиве не три элемента ровно.";
+}
+checkArrayElements($another_arr);
+
+

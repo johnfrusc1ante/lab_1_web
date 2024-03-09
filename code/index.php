@@ -60,3 +60,8 @@ $num_arr = array(4, -2, 5, 19, -130, 0, 10);
 echo min($num_arr);
 echo max($num_arr);
 
+echo rand(1, 100);
+$arr = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+for($i = 0; $i < 10; $i += 1){
+    $arr[$i] = rand(1, 100);
+}

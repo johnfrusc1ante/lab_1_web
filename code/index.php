@@ -275,3 +275,7 @@ function checkArrayElements($arr)
 checkArrayElements($another_arr);
 
 
+$rows = 20;
+echo "Пирамидка:";
+for ($i = 1; $i <= $rows; $i +=1)
+    echo str_repeat("x", $i);

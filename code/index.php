@@ -1,9 +1,11 @@
 <?php
+//task 1
 $very_bad_unclear_name = "s proshedshim ";
 $order = &$vary_bad_unclear_name;
 $order = $order."8 marta";
 echo "\nyou have 1 unread message: $very_bad_unclear_name\n";
 
+//task 2
 $a = 4;
 echo $a;
 $b = 3.14;
@@ -15,12 +17,17 @@ $last_month = 1187.23;
 $this_month = 1089.98;
 echo $last_month-$this_month;
 
+//task 11
 $num_languages = 4;
 $months = 11;
 $days = $months * 16;
 $days_per_language = $days / $num_languages;
 echo $days_per_language;
 
+//task 12
+echo 8**2;
+
+//task 13
 $my_num = 69;
 $answer = $my_num;
 $answer += 2;
@@ -30,6 +37,7 @@ $answer /= 2;
 $answer -= $my_num;
 echo $answer;
 
+//task 14
 $a = 10;
 $b = 3;
 echo $a%$b;
@@ -91,6 +99,7 @@ for ($i=0; $i <= sizeof($arr) && $sum <= 10; $i += 1) {
 }
 echo "Необходимо сложить $num первых элементов чтобы получилась сумма больше 10.";
 
+//task 15
 function printStringReturnNumber($str)
 {
     echo $str;
@@ -100,6 +109,7 @@ function printStringReturnNumber($str)
 $my_num = printStringReturnNumber("Hasbula");
 echo $my_num;
 
+//task 16
 function increaseEnthusiasm($str)
 {
     $str .= "!";
@@ -150,6 +160,7 @@ function countDigitsSum($num)
 }
 echo "Сумма цифр массива: ", countDigitsSum($num);
 
+//task 17
 $arr = [];
 function arrayFillWithXxx($arr, $num)
 {
@@ -220,6 +231,7 @@ echo "Последний элемент массива ['a', 'b', 'c', 'd', 'e']
 echo "Предпоследний элемент массива ['a', 'b', 'c', 'd', 'e']: ", $arr1[3];
 
 
+//task 18
 function checkSum($num, $num1)
 {
     if (($num + $num1) > 10)
@@ -274,13 +286,13 @@ function checkArrayElements($arr)
 }
 checkArrayElements($another_arr);
 
-
+//task 19
 $rows = 20;
 echo "Пирамидка:";
 for ($i = 1; $i <= $rows; $i +=1)
     echo str_repeat("x", $i);
 
-
+//task 20
 $arr = [14, 251, 215, 903];
 $average = array_sum($arr) / sizeof($arr);
 echo "Среднее арифмитическое массива: $average";

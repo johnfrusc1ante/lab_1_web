@@ -150,3 +150,71 @@ function countDigitsSum($num)
 }
 echo "Сумма цифр массива: ", countDigitsSum($num);
 
+$arr = [];
+function arrayFillWithXxx($arr, $num)
+{
+    for ($i=1; $i <= $num; $i += 1)
+        $arr[$i-1] = str_repeat("x", $i);
+
+    return $arr;
+}
+echo "Массив, заполненый 'x', 'xx', 'xxx', ...: ", implode(", ", arrayFillWithXxx($arr, 5));
+
+function arrayFill($str, $num)
+{
+    $arr = [];
+    for ($i=1; $i <= $num; $i += 1)
+        $arr[$i-1] = $str;
+
+    return $arr;
+}
+echo "Массив, заполненный заданными значениями: ", implode(", ", arrayFill("hehe", 5));
+
+$arr_two_d = [[158, 13, 2], [1, 7], [89]];
+function sumArray($arr)
+{
+    $sum = 0;
+    foreach ($arr as $value) {
+        if (is_array($value))
+            $sum += sumArray($value);
+        else
+            $sum += $value;
+
+    }
+    return $sum;
+}
+echo "Сумма двумерного массива: ", sumArray($arr_two_d);
+
+function createTwoDimensionalArray($rows, $columns)
+{
+    for ($i = 0; $i < $rows; $i += 1) {
+        $arr[$i] = [];
+        for ($j = 0; $j < $columns; $j += 1)
+            $arr[$i][$j] = ($i * $columns) + ($j + 1);
+    }
+    return $arr;
+}
+$new_arr = createTwoDimensionalArray(3, 3);
+echo "Созданный двумерный массив: ";
+for ($i = 0; $i < sizeof($new_arr); $i++) {
+    for ($j = 0; $j < sizeof($new_arr[$i]); $j++)
+        echo $new_arr[$i][$j] . " ";
+    echo "\n";
+}
+
+$multi_arr = [2, 5, 3, 9];
+$result = ($multi_arr[0] * $multi_arr[1]) + ($multi_arr[2] * $multi_arr[3]);
+echo "Результат операций с массивом [2, 5, 3, 9]: ", $result;
+
+$user = ['name' => 'Bogdan', 'surname' => 'Vavilov', 'patronymic' => 'Sergeevich'];
+echo "Имя, фамилия, отчество: ", $user['name'].' '.$user['surname'].' '.$user['patronymic'];
+
+$date = ['year' => '2024', 'month' => '03', 'day' => '08'];
+echo "Дата: ", $date['year'].'-'.$date['month'].'-'.$date['day'];
+
+$arr1 = ['a', 'b', 'c', 'd', 'e'];
+echo "Количество элементов массива ['a', 'b', 'c', 'd', 'e']: ", sizeof($arr1);
+
+$arr2 = ['a', 'b', 'c', 'd', 'e'];
+echo "Последний элемент массива ['a', 'b', 'c', 'd', 'e']: ", $arr1[4];
+echo "Предпоследний элемент массива ['a', 'b', 'c', 'd', 'e']: ", $arr1[3];

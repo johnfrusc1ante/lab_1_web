@@ -279,3 +279,24 @@ $rows = 20;
 echo "Пирамидка:";
 for ($i = 1; $i <= $rows; $i +=1)
     echo str_repeat("x", $i);
+
+
+$arr = [14, 251, 215, 903];
+$average = array_sum($arr) / sizeof($arr);
+echo "Среднее арифмитическое массива: $average";
+
+$sum = (100 * (1 + 100)) / 2;
+echo "Сумма чисел от 1 до 100: ", $sum;
+
+$arr_1 = [225, 9, 1];
+$arr_2 = array_map('sqrt', $arr_1);
+echo "Массив квадратных корней: ", implode(", ", $arr_2);
+
+$chars = range("a", "z");
+$nums = range(1, 26);
+$arr = array_combine($chars, $nums);
+
+$nums = "1234567890";
+$arr = str_split($nums, 2);
+$sum = array_sum($arr);
+echo "Сумма пар чисел: ", $sum;

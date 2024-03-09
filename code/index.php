@@ -55,3 +55,8 @@ echo round(sqrt(379), 2);
 $floor = floor(sqrt(587));
 $ceil = ceil(sqrt(587));
 $as_arr = array("floor" => $floor, "ceil" => $ceil);
+
+$num_arr = array(4, -2, 5, 19, -130, 0, 10);
+echo min($num_arr);
+echo max($num_arr);
+

@@ -29,3 +29,7 @@ $answer -= 2;
 $answer /= 2;
 $answer -= $my_num;
 echo $answer;
+
+$a = 10;
+$b = 3;
+echo $a%$b;

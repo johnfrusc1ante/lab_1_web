@@ -39,4 +39,13 @@ if ($a%$b == 0)
 else
     echo "делится с остатком";
 
+$st = pow(2, 10);
+echo $st;
+echo sqrt(245);
+$arr = array(4, 2, 5, 19, 13, 0, 10);
+$sum = 0;
+foreach($arr as &$value){
+    $sum += pow($value, 2);
+}
+echo sqrt($sum);
 

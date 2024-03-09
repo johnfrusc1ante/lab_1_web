@@ -65,3 +65,11 @@ $arr = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 for($i = 0; $i < 10; $i += 1){
     $arr[$i] = rand(1, 100);
 }
+
+$a = 16;
+$b = 17;
+echo abs($a-$b);
+$arr = array(1, 2, -1, -2, 3, -3);
+foreach($arr as &$value){
+    $value = abs($value);
+}

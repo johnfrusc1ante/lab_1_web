@@ -73,3 +73,12 @@ $arr = array(1, 2, -1, -2, 3, -3);
 foreach($arr as &$value){
     $value = abs($value);
 }
+
+$num = rand(1, 100);
+$arr = [];
+for ($i=1; $i <= $num; $i++) {
+    if ($num % $i == 0)
+        $divisor_arr[] = $i;
+}
+echo "Делители числа $num: ", implode(", ", $divisor_arr);
+

@@ -21,3 +21,11 @@ $days = $months * 16;
 $days_per_language = $days / $num_languages;
 echo $days_per_language;
 
+$my_num = 69;
+$answer = $my_num;
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $my_num;
+echo $answer;

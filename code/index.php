@@ -99,3 +99,54 @@ function printStringReturnNumber($str)
 }
 $my_num = printStringReturnNumber("Hasbula");
 echo $my_num;
+
+function increaseEnthusiasm($str)
+{
+    $str .= "!";
+    return $str;
+}
+echo "Результат работы increaseEnthusiasm(): ", increaseEnthusiasm("AAA");
+
+function repeatThreeTimes($str)
+{
+    $str .= " " . $str . " " . $str;
+    return $str;
+}
+echo "Результат работы repeatThreeTimes(): ", repeatThreeTimes("Где деньги, Вова?");
+
+echo "Результат работы increaseEnthusiasm(repeatThreeTimes()): ",
+increaseEnthusiasm(repeatThreeTimes("Вова у меня расписка есть"));
+
+function cut($str, $num = 10)
+{
+    return substr($str, $num);
+}
+echo "Результат работы cut() при вводе строки '111115' и числа 5: ", cut("1111122225", 5);
+
+$arr = [1, 4, 5, 1984, 2024];
+function printArr($arr, $i = 0)
+{
+    if ($i < sizeof($arr)) {
+        echo $arr[$i], " ";
+        printArr($arr, $i + 1);
+    }
+}
+echo "Вывод массива с помощью рекурсии: ", printArr($arr);
+
+$num = rand(999, 9999);
+function countDigitsSum($num)
+{
+    while ($num > 9) {
+        $digits_sum = 0;
+        $str_num = (string)($num);
+
+        for ($i = 0; $i < strlen($str_num); $i++)
+            $digits_sum += intval($str_num[$i]);
+
+        $num = $digits_sum;
+    }
+
+    return $num;
+}
+echo "Сумма цифр массива: ", countDigitsSum($num);
+

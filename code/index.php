@@ -1,9 +1,9 @@
 <?php
 //task 1
-$very_bad_unclear_name = "s proshedshim ";
-$order = &$vary_bad_unclear_name;
+$veryBadUnclearName = "s proshedshim ";
+$order = $veryBadUnclearName;
 $order = $order."8 marta";
-echo "\nyou have 1 unread message: $very_bad_unclear_name\n";
+echo "\nyou have 1 unread message: $veryBadUnclearName\n";
 
 //task 2
 $a = 4;
@@ -13,36 +13,36 @@ echo "\n";
 echo $b;
 echo "\n";
 echo 9+3;
-$last_month = 1187.23;
-$this_month = 1089.98;
-echo $last_month-$this_month;
+$lastMonth = 1187.23;
+$thisMonth = 1089.98;
+echo $lastMonth - $thisMonth;
 
 //task 11
-$num_languages = 4;
+$numLanguages = 4;
 $months = 11;
 $days = $months * 16;
-$days_per_language = $days / $num_languages;
-echo $days_per_language;
+$daysPerLanguage = $days / $numLanguages;
+echo $daysPerLanguage;
 
 //task 12
-echo 8**2;
+echo 8 ** 2;
 
 //task 13
-$my_num = 69;
-$answer = $my_num;
+$myNum = 69;
+$answer = $myNum;
 $answer += 2;
 $answer *= 2;
 $answer -= 2;
 $answer /= 2;
-$answer -= $my_num;
+$answer -= $myNum;
 echo $answer;
 
 //task 14
 $a = 10;
 $b = 3;
-echo $a%$b;
+echo $a % $b;
 
-if ($a%$b == 0)
+if (0 === $a % $b)
     echo "делится";
 else
     echo "делится с остатком";
@@ -62,11 +62,11 @@ echo round(sqrt(379), 1);
 echo round(sqrt(379), 2);
 $floor = floor(sqrt(587));
 $ceil = ceil(sqrt(587));
-$as_arr = ["floor" => $floor, "ceil" => $ceil];
+$asArr = ["floor" => $floor, "ceil" => $ceil];
 
-$num_arr = [4, -2, 5, 19, -130, 0, 10];
-echo min($num_arr);
-echo max($num_arr);
+$numArr = [4, -2, 5, 19, -130, 0, 10];
+echo min($numArr);
+echo max($numArr);
 
 echo rand(1, 100);
 $arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -76,7 +76,7 @@ for($i = 0; $i < 10; $i += 1){
 
 $a = 16;
 $b = 17;
-echo abs($a-$b);
+echo abs($a - $b);
 $arr = [1, 2, -1, -2, 3, -3];
 foreach($arr as &$value){
     $value = abs($value);
@@ -84,16 +84,16 @@ foreach($arr as &$value){
 
 $num = rand(1, 100);
 $arr = [];
-for ($i=1; $i <= $num; $i++) {
-    if ($num % $i == 0)
-        $divisor_arr[] = $i;
+for ($i = 1; $i <= $num; $i += 1) {
+    if (0 === $num % $i)
+        $divisorArr[] = $i;
 }
-echo "Делители числа $num: ", implode(", ", $divisor_arr);
+echo "Делители числа $num: ", implode(", ", $divisorArr);
 
 $arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 $sum = 0;
 $num = 0;
-for ($i=0; $i <= sizeof($arr) && $sum <= 10; $i += 1) {
+for ($i = 0; $i <= sizeof($arr) && $sum <= 10; $i += 1) {
     $sum += $arr[$i];
     $num += 1;
 }
@@ -106,8 +106,8 @@ function printStringReturnNumber($str)
     $num = 69;
     return $num;
 }
-$my_num = printStringReturnNumber("Hasbula");
-echo $my_num;
+$myNum = printStringReturnNumber("Hasbula");
+echo $myNum;
 
 //task 16
 function increaseEnthusiasm($str)
@@ -146,14 +146,14 @@ echo "Вывод массива с помощью рекурсии: ", printArr(
 $num = rand(999, 9999);
 function countDigitsSum($num)
 {
-    while ($num > 9) {
-        $digits_sum = 0;
-        $str_num = (string)($num);
+    while (9 < $num) {
+        $digitsSum = 0;
+        $strNum = (string)($num);
 
-        for ($i = 0; $i < strlen($str_num); $i++)
-            $digits_sum += intval($str_num[$i]);
+        for ($i = 0; $i < strlen($strNum); $i += 1)
+            $digitsSum += intval($strNum[$i]);
 
-        $num = $digits_sum;
+        $num = $digitsSum;
     }
 
     return $num;
@@ -164,8 +164,8 @@ echo "Сумма цифр массива: ", countDigitsSum($num);
 $arr = [];
 function arrayFillWithXxx($arr, $num)
 {
-    for ($i=1; $i <= $num; $i += 1)
-        $arr[$i-1] = str_repeat("x", $i);
+    for ($i = 1; $i <= $num; $i += 1)
+        $arr[$i - 1] = str_repeat("x", $i);
 
     return $arr;
 }
@@ -174,14 +174,14 @@ echo "Массив, заполненый 'x', 'xx', 'xxx', ...: ", implode(", ",
 function arrayFill($str, $num)
 {
     $arr = [];
-    for ($i=1; $i <= $num; $i += 1)
-        $arr[$i-1] = $str;
+    for ($i = 1; $i <= $num; $i += 1)
+        $arr[$i - 1] = $str;
 
     return $arr;
 }
 echo "Массив, заполненный заданными значениями: ", implode(", ", arrayFill("hehe", 5));
 
-$arr_two_d = [[158, 13, 2], [1, 7], [89]];
+$arrTwoD = [[158, 13, 2], [1, 7], [89]];
 function sumArray($arr)
 {
     $sum = 0;
@@ -194,7 +194,7 @@ function sumArray($arr)
     }
     return $sum;
 }
-echo "Сумма двумерного массива: ", sumArray($arr_two_d);
+echo "Сумма двумерного массива: ", sumArray($arrTwoD);
 
 function createTwoDimensionalArray($rows, $columns)
 {
@@ -205,16 +205,16 @@ function createTwoDimensionalArray($rows, $columns)
     }
     return $arr;
 }
-$new_arr = createTwoDimensionalArray(3, 3);
+$newArr = createTwoDimensionalArray(3, 3);
 echo "Созданный двумерный массив: ";
-for ($i = 0; $i < sizeof($new_arr); $i++) {
-    for ($j = 0; $j < sizeof($new_arr[$i]); $j++)
-        echo $new_arr[$i][$j] . " ";
+for ($i = 0; $i < sizeof($newArr); $i += 1) {
+    for ($j = 0; $j < sizeof($newArr[$i]); $j += 1)
+        echo $newArr[$i][$j] . " ";
     echo "\n";
 }
 
-$multi_arr = [2, 5, 3, 9];
-$result = ($multi_arr[0] * $multi_arr[1]) + ($multi_arr[2] * $multi_arr[3]);
+$multiArr = [2, 5, 3, 9];
+$result = ($multiArr[0] * $multiArr[1]) + ($multiArr[2] * $multiArr[3]);
 echo "Результат операций с массивом [2, 5, 3, 9]: ", $result;
 
 $user = ['name' => 'Bogdan', 'surname' => 'Vavilov', 'patronymic' => 'Sergeevich'];
@@ -234,7 +234,7 @@ echo "Предпоследний элемент массива ['a', 'b', 'c', '
 //task 18
 function checkSum($num, $num1)
 {
-    if (($num + $num1) > 10)
+    if (10 < ($num + $num1))
         return "true";
     else
         return "false";
@@ -244,7 +244,7 @@ echo "Результат при сложении 2 и 3: ", checkSum(2, 3);
 
 function checkEqual($num, $num1)
 {
-    if ($num == $num1)
+    if ($num === $num1)
         return "true";
     else
         return "false";
@@ -253,30 +253,30 @@ echo "Результат при сравнении 5 и 5: ", checkEqual(5, 5);
 echo "Результат при сравнении 2 и 3: ", checkEqual(2, 3);
 
 $test = 1;
-if ($test == 0)
+if (0 === $test)
     echo "верно";
 
 $age = rand(1, 150);
 function checkAge($age)
 {
-    if (($age > 10) && ($age < 99)) {
+    if ((10 < $age) && (99 > $age)) {
         $sum = ($age % 10) + (int)($age / 10);
         echo "Сумма цифр $age: ", $sum;
         echo "Сумма цифр $age двузначна.";
     }
-    elseif ($age > 99)
+    elseif (99 < $age)
         echo "Число $age вне диапозона от 10 до 99.";
     else
         echo "Сумма цифр $age однозначна.";
 }
 checkAge($age);
 
-$another_arr = [1, 2, 3];
+$anotherArr = [1, 2, 3];
 function checkArrayElements($arr)
 {
     $sum = 0;
-    if (sizeof($arr) == 3) {
-        for ($i = 0; $i < sizeof($arr); $i++)
+    if (3 === sizeof($arr)) {
+        for ($i = 0; $i < sizeof($arr); $i += 1)
             $sum += $arr[$i];
 
         echo "Сумма трёх элементов массива: ", $sum;
@@ -284,12 +284,12 @@ function checkArrayElements($arr)
     else
         echo "В массиве не три элемента ровно.";
 }
-checkArrayElements($another_arr);
+checkArrayElements($anotherArr);
 
 //task 19
 $rows = 20;
 echo "Пирамидка:";
-for ($i = 1; $i <= $rows; $i +=1)
+for ($i = 1; $i <= $rows; $i += 1)
     echo str_repeat("x", $i);
 
 //task 20
@@ -300,9 +300,9 @@ echo "Среднее арифмитическое массива: $average";
 $sum = (100 * (1 + 100)) / 2;
 echo "Сумма чисел от 1 до 100: ", $sum;
 
-$arr_1 = [225, 9, 1];
-$arr_2 = array_map('sqrt', $arr_1);
-echo "Массив квадратных корней: ", implode(", ", $arr_2);
+$arr1 = [225, 9, 1];
+$arr2 = array_map('sqrt', $arr1);
+echo "Массив квадратных корней: ", implode(", ", $arr2);
 
 $chars = range("a", "z");
 $nums = range(1, 26);

@@ -40,3 +40,28 @@
         <th>Title</th>
         <th>Description</th>
         </thead>
+        <?php
+        $categories = ['cars', 'bikes'];
+        foreach ($categories as $category) {
+            $directory = "./categories/$category";
+            if (is_dir($directory)) {
+                $files = scandir($directory);
+                foreach ($files as $file) {
+                    if ($file != '.' && $file != '..') {
+                        $content = file_get_contents("$directory/$file");
+                        $values = explode("\n", $content);
+                        echo "<tbody>";
+                        echo "<td>{$values[0]}</td>";
+                        echo "<td>$category</td>";
+                        echo "<td>{$values[1]}</td>";
+                        echo "<td>{$values[2]}</td>";
+                        echo "</tbody>";
+                    }
+                }
+            }
+        }
+        ?>
+    </table>
+</div>
+</body>
+</html>

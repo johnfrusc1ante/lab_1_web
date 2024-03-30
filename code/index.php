@@ -24,3 +24,11 @@
                 }
             }
             ?>
+        </select><br><br>
+        <label for="title">Title</label><br>
+        <input type="text" name="title" required><br>
+        <label for="description">Description</label><br>
+        <textarea rows="3" name="description" required></textarea><br>
+        <input type="submit" value="Save"><br>
+    </form>
+</div>

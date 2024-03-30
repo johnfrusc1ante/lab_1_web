@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label for="salary">Зарплата:</label>
         <input type="text" name="salary" id="salary" required>
         <br>
-        <label for="marriage_condition">Состояние в браке:</label>
+        <label for="country_of_origin">Родина:</label>
         <input type="text" name="country_of_origin" id="country_of_origin" required>
         <br>
         <button type="submit">Submit</button>

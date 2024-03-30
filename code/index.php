@@ -14,15 +14,13 @@
         <input type="email" name="email" required><br><br>
         <label for="category">Category</label>
         <select name="category" required>
-<?php
-$dirPath = "./categories/";
-if (is_dir($dirPath))
-{
-    $subDirs = array_filter(glob($dirPath . '*'), 'is_dir');
-    foreach ($subDirs as $subDir)
-    {
-        $name = basename($subDir);
-        echo "<option value=\"$name\">$name</option>";
-    }
-}
-?>
+            <?php
+            $dirPath = "./categories/";
+            if (is_dir($dirPath)) {
+                $subDirs = array_filter(glob($dirPath . '*'), 'is_dir');
+                foreach ($subDirs as $subDir) {
+                    $name = basename($subDir);
+                    echo "<option value=\"$name\">$name</option>";
+                }
+            }
+            ?>

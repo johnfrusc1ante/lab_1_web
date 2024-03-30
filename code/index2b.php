@@ -18,3 +18,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ФамилияИмяВозраст</title>
 </head>
+<body>
+    <form method="post">
+        <label for="surname">Фамилия:</label>
+        <input type="text" name="surname" id="surname" required>
+        <br>
+        <label for="name">Имя:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="age">Возраст:</label>
+        <input type="number" name="age" id="age" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

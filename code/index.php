@@ -32,3 +32,11 @@
         <input type="submit" value="Save"><br>
     </form>
 </div>
+<div id="table">
+    <table>
+        <thead>
+        <th>Email</th>
+        <th>Category</th>
+        <th>Title</th>
+        <th>Description</th>
+        </thead>

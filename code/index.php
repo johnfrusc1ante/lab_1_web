@@ -5,3 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data</title>
 </head>
+<body>
+<div id="form">
+    <form action="save.php" method="post">
+        <label for="email">Email</label>
+        <input type="email" name = "email" required>
+
+        <label for="category">Category</label>
+        <select name="category">
+            <option value="cars">Cars</option>
+            <option value="bikes">Bikes</option>
+        </select>

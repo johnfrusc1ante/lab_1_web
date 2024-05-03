@@ -45,3 +45,33 @@
             $client->setAccessType('offline');
             $path = __DIR__ . '/credentials.json';
             $client->setAuthConfig($path);
+
+            $service = new Google\Service\Sheets($client);
+
+            $spreadsheetId = '1rHYXEr1rgsnArbYia0_lEY5NyK427HFHDt4xVjVVQ0c';
+
+            $range = 'lab4' . '!A:D';
+
+            $response = $service->spreadsheets_values->get($spreadsheetId, $range);
+            $values = $response->getValues();
+
+            if (!empty($values)) {
+                $isFirstRow = true;
+                foreach ($values as $row) {
+                    if ($isFirstRow) {
+                        $isFirstRow = false;
+                        continue;
+                    }
+                    echo '<tr>';
+                    foreach ($row as $cell) {
+                        echo '<td>' . htmlspecialchars($cell) . '</td>';
+                    }
+                    echo '</tr>';
+                }
+            }
+            ?>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

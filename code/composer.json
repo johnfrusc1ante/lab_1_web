@@ -1,5 +1,7 @@
 {
     "name": "snyat/code",
     "type": "project",
-    "require": {}
+    "require": {
+        "google/apiclient": "^2.16"
+    }
 }

@@ -16,3 +16,21 @@
             <option value="cars">Cars</option>
             <option value="bikes">Bikes</option>
         </select>
+
+        <label for="title">Title</label>
+        <input type="text" name = "title" required><br/>
+        <label for="description">Description</label><br/>
+        <textarea name="description" rows="1" cols = "25"></textarea><br/>
+
+        <input type="submit" value="Save">
+    </form>
+</div>
+<div id="table">
+    <table>
+        <thead>
+        <tr>
+            <th>Email</th>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Description</th>
+        </tr>

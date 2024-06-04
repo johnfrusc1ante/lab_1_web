@@ -37,3 +37,23 @@ $mysqli->close();
 </head>
 <body>
 <h1>The table</h1>
+
+<form action="alex4.php" method="POST">
+    <label for="email">Email</label>
+    <input type="email" name="email" required>
+
+    <label for="title">Title</label>
+    <input type="text" name="title" required>
+
+    <label for="categories">Category</label>
+    <select name="categories" required>
+        <option value="cars">Cars</option>
+        <option value="bikes">Bikes</option>
+
+    </select><br>
+
+    <label for="description">Description:</label><br>
+    <textarea name="text" rows="10" cols="54" required></textarea><br>
+
+    <button type="submit">Submit</button>
+</form>

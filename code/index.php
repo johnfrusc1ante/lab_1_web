@@ -27,25 +27,39 @@ $mysqli->close();
 ?>
 
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>lab_5</title>
+    <title>The table</title>
+    <style>
+        body {
+            font-family: Ebrima;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
 <h1>The table</h1>
 
 <form action="index.php" method="POST">
-    <label for="email">Email</label>
-    <input type="email" name="email" required>
-
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="example@email.com" required><br />
     <label for="title">Title</label>
-    <input type="text" name="title" required>
+    <input type="text" name="title" required><br>
 
-    <label for="categories">Category</label>
+    <label for="categories">Categories:</label>
     <select name="categories" required>
         <option value="cars">Cars</option>
         <option value="bikes">Bikes</option>
@@ -54,35 +68,24 @@ $mysqli->close();
 
     <label for="description">Description:</label><br>
     <textarea name="text" rows="10" cols="54" required></textarea><br>
-
-    <button type="submit">Submit</button>
+    <button type="submit">Post</button>
 </form>
-
-<div id="table">
-    <?php if (!empty($arr)): ?>
-        <table>
-            <thead>
-            <tr>
-                <th>Email</th>
-                <th>Title</th>
-                <th>Category</th>
-                <th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($arr as $ad): ?>
-                <tr>
-                    <td><?= $ad['email'] ?></td>
-                    <td><?= $ad['title'] ?></td>
-                    <td><?= $ad['category'] ?></td>
-                    <td><?= $ad['description'] ?></td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
-    <?php else: ?>
-        <p>no notices yet</p>
-    <?php endif; ?>
-</div>
+<h2>Recent notices:</h2>
+<table>
+    <tr>
+        <th>Email</th>
+        <th>Categories</th>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+    <?php foreach ($arr as $item): ?>
+        <tr>
+            <td><?= $item['email'] ?></td>
+            <td><?= $item['category'] ?></td>
+            <td><?= $item['title'] ?></td>
+            <td><?= $item['description'] ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
 </body>
 </html>

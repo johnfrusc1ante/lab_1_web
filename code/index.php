@@ -38,7 +38,7 @@ $mysqli->close();
 <body>
 <h1>The table</h1>
 
-<form action="alex4.php" method="POST">
+<form action="index.php" method="POST">
     <label for="email">Email</label>
     <input type="email" name="email" required>
 

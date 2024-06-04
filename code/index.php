@@ -15,3 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $mysqli->query("INSERT INTO ad (email, title, description, category) VALUES ('$email', '$title', '$description', '$category')");
 }
+
+$arr = [];
+if ($result = $mysqli->query('SELECT * FROM ad ORDER BY created DESC')) {
+    while ($row = $result->fetch_assoc()) {
+        $arr[] = $row;
+    }
+    $result->close();
+}
+$mysqli->close();
+
+?>

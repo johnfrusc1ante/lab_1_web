@@ -57,3 +57,32 @@ $mysqli->close();
 
     <button type="submit">Submit</button>
 </form>
+
+<div id="table">
+    <?php if (!empty($arr)): ?>
+        <table>
+            <thead>
+            <tr>
+                <th>Email</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($arr as $ad): ?>
+                <tr>
+                    <td><?= $ad['email'] ?></td>
+                    <td><?= $ad['title'] ?></td>
+                    <td><?= $ad['category'] ?></td>
+                    <td><?= $ad['description'] ?></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    <?php else: ?>
+        <p>no notices yet</p>
+    <?php endif; ?>
+</div>
+</body>
+</html>
